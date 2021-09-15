@@ -1,0 +1,721 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F340E56265A9D5700667B0A /* Channels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F340E55265A9D5700667B0A /* Channels.swift */; };
+		2F340E58265A9E2D00667B0A /* traxx_channels.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F340E57265A9E2D00667B0A /* traxx_channels.json */; };
+		2FC2D7A9265AE83500C61C93 /* STKDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2D7A8265AE83500C61C93 /* STKDataSource.swift */; };
+		2FC2D7AB265AEC1F00C61C93 /* STKDataSourceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2D7AA265AEC1F00C61C93 /* STKDataSourceWrapper.swift */; };
+		2FCED470265A7582003C6278 /* Traxx_fmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED46F265A7582003C6278 /* Traxx_fmApp.swift */; };
+		2FCED472265A7582003C6278 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED471265A7582003C6278 /* ContentView.swift */; };
+		2FCED474265A7582003C6278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCED473265A7582003C6278 /* Assets.xcassets */; };
+		2FCED477265A7582003C6278 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FCED476265A7582003C6278 /* Preview Assets.xcassets */; };
+		2FCED482265A7582003C6278 /* Traxx_fmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED481265A7582003C6278 /* Traxx_fmTests.swift */; };
+		2FCED48D265A7582003C6278 /* Traxx_fmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED48C265A7582003C6278 /* Traxx_fmUITests.swift */; };
+		2FCED4A1265A7629003C6278 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4A0265A7629003C6278 /* AudioPlayerView.swift */; };
+		2FCED4A3265A762D003C6278 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4A2265A762D003C6278 /* BarView.swift */; };
+		2FCED4A5265A7632003C6278 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4A4265A7632003C6278 /* AudioPlayer.swift */; };
+		2FCED4A8265A7677003C6278 /* Image+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4A7265A7677003C6278 /* Image+Additions.swift */; };
+		2FCED4C1265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4AD265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.m */; };
+		2FCED4C3265A7A0B003C6278 /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4B0265A7A0B003C6278 /* STKAudioPlayer.m */; };
+		2FCED4C4265A7A0B003C6278 /* STKHTTPDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4B1265A7A0B003C6278 /* STKHTTPDataSource.swift */; };
+		2FCED4C5265A7A0B003C6278 /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4B2265A7A0B003C6278 /* STKQueueEntry.m */; };
+		2FCED4CB265A7EEF003C6278 /* SampleQueueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4CA265A7EEF003C6278 /* SampleQueueId.swift */; };
+		2FEE3F2C26F250AF00EE03F2 /* STKLocalFileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE3F2B26F250AF00EE03F2 /* STKLocalFileDataSource.swift */; };
+		2FEE3F2E26F253CA00EE03F2 /* STKCoreFoundationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE3F2D26F253CA00EE03F2 /* STKCoreFoundationDataSource.swift */; };
+		2FEE3F3126F260B100EE03F2 /* SampleCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE3F3026F260B100EE03F2 /* SampleCode.swift */; };
+		2FEE3F3326F2625000EE03F2 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE3F3226F2625000EE03F2 /* Array+.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FCED47E265A7582003C6278 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FCED464265A7582003C6278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FCED46B265A7582003C6278;
+			remoteInfo = Traxx.fm;
+		};
+		2FCED489265A7582003C6278 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FCED464265A7582003C6278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FCED46B265A7582003C6278;
+			remoteInfo = Traxx.fm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F340E55265A9D5700667B0A /* Channels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
+		2F340E57265A9E2D00667B0A /* traxx_channels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = traxx_channels.json; sourceTree = "<group>"; };
+		2FC2D7A8265AE83500C61C93 /* STKDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STKDataSource.swift; sourceTree = "<group>"; };
+		2FC2D7AA265AEC1F00C61C93 /* STKDataSourceWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STKDataSourceWrapper.swift; sourceTree = "<group>"; };
+		2FCED46C265A7582003C6278 /* Traxx.fm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traxx.fm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FCED46F265A7582003C6278 /* Traxx_fmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traxx_fmApp.swift; sourceTree = "<group>"; };
+		2FCED471265A7582003C6278 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2FCED473265A7582003C6278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FCED476265A7582003C6278 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2FCED478265A7582003C6278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FCED47D265A7582003C6278 /* Traxx.fmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Traxx.fmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FCED481265A7582003C6278 /* Traxx_fmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traxx_fmTests.swift; sourceTree = "<group>"; };
+		2FCED483265A7582003C6278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FCED488265A7582003C6278 /* Traxx.fmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Traxx.fmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FCED48C265A7582003C6278 /* Traxx_fmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traxx_fmUITests.swift; sourceTree = "<group>"; };
+		2FCED48E265A7582003C6278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FCED4A0265A7629003C6278 /* AudioPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerView.swift; sourceTree = "<group>"; };
+		2FCED4A2265A762D003C6278 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		2FCED4A4265A7632003C6278 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		2FCED4A7265A7677003C6278 /* Image+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Additions.swift"; sourceTree = "<group>"; };
+		2FCED4AC265A7A0A003C6278 /* Traxx.fm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Traxx.fm-Bridging-Header.h"; sourceTree = "<group>"; };
+		2FCED4AD265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAutoRecoveringHTTPDataSource.m; sourceTree = "<group>"; };
+		2FCED4B0265A7A0B003C6278 /* STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAudioPlayer.m; sourceTree = "<group>"; };
+		2FCED4B1265A7A0B003C6278 /* STKHTTPDataSource.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = STKHTTPDataSource.swift; sourceTree = "<group>"; };
+		2FCED4B2265A7A0B003C6278 /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueEntry.m; sourceTree = "<group>"; };
+		2FCED4B8265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAutoRecoveringHTTPDataSource.h; sourceTree = "<group>"; };
+		2FCED4BA265A7A0B003C6278 /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueEntry.h; sourceTree = "<group>"; };
+		2FCED4BB265A7A0B003C6278 /* STKMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKMacro.h; sourceTree = "<group>"; };
+		2FCED4BC265A7A0B003C6278 /* STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAudioPlayer.h; sourceTree = "<group>"; };
+		2FCED4C0265A7A0B003C6278 /* STKSpinLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKSpinLock.h; sourceTree = "<group>"; };
+		2FCED4CA265A7EEF003C6278 /* SampleQueueId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleQueueId.swift; sourceTree = "<group>"; };
+		2FEE3F2B26F250AF00EE03F2 /* STKLocalFileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STKLocalFileDataSource.swift; sourceTree = "<group>"; };
+		2FEE3F2D26F253CA00EE03F2 /* STKCoreFoundationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STKCoreFoundationDataSource.swift; sourceTree = "<group>"; };
+		2FEE3F3026F260B100EE03F2 /* SampleCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCode.swift; sourceTree = "<group>"; };
+		2FEE3F3226F2625000EE03F2 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2FCED469265A7582003C6278 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FCED47A265A7582003C6278 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FCED485265A7582003C6278 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FCED463265A7582003C6278 = {
+			isa = PBXGroup;
+			children = (
+				2FCED46E265A7582003C6278 /* Traxx.fm */,
+				2FCED480265A7582003C6278 /* Traxx.fmTests */,
+				2FCED48B265A7582003C6278 /* Traxx.fmUITests */,
+				2FCED46D265A7582003C6278 /* Products */,
+				2FCED49B265A759C003C6278 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2FCED46D265A7582003C6278 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FCED46C265A7582003C6278 /* Traxx.fm.app */,
+				2FCED47D265A7582003C6278 /* Traxx.fmTests.xctest */,
+				2FCED488265A7582003C6278 /* Traxx.fmUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2FCED46E265A7582003C6278 /* Traxx.fm */ = {
+			isa = PBXGroup;
+			children = (
+				2FEE3F2F26F2609800EE03F2 /* Other */,
+				2FCED4AB265A79E5003C6278 /* Objc */,
+				2FCED4A6265A766E003C6278 /* Extensions */,
+				2FCED49F265A75E9003C6278 /* Views */,
+				2FCED49E265A75E2003C6278 /* Models */,
+				2FCED46F265A7582003C6278 /* Traxx_fmApp.swift */,
+				2FCED471265A7582003C6278 /* ContentView.swift */,
+				2FCED473265A7582003C6278 /* Assets.xcassets */,
+				2FCED478265A7582003C6278 /* Info.plist */,
+				2FCED475265A7582003C6278 /* Preview Content */,
+			);
+			path = Traxx.fm;
+			sourceTree = "<group>";
+		};
+		2FCED475265A7582003C6278 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2FCED476265A7582003C6278 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2FCED480265A7582003C6278 /* Traxx.fmTests */ = {
+			isa = PBXGroup;
+			children = (
+				2FCED481265A7582003C6278 /* Traxx_fmTests.swift */,
+				2FCED483265A7582003C6278 /* Info.plist */,
+			);
+			path = Traxx.fmTests;
+			sourceTree = "<group>";
+		};
+		2FCED48B265A7582003C6278 /* Traxx.fmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2FCED48C265A7582003C6278 /* Traxx_fmUITests.swift */,
+				2FCED48E265A7582003C6278 /* Info.plist */,
+			);
+			path = Traxx.fmUITests;
+			sourceTree = "<group>";
+		};
+		2FCED49B265A759C003C6278 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2FCED49E265A75E2003C6278 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F340E57265A9E2D00667B0A /* traxx_channels.json */,
+				2FCED4A4265A7632003C6278 /* AudioPlayer.swift */,
+				2FCED4CA265A7EEF003C6278 /* SampleQueueId.swift */,
+				2F340E55265A9D5700667B0A /* Channels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2FCED49F265A75E9003C6278 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2FCED4A2265A762D003C6278 /* BarView.swift */,
+				2FCED4A0265A7629003C6278 /* AudioPlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2FCED4A6265A766E003C6278 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2FCED4A7265A7677003C6278 /* Image+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2FCED4AB265A79E5003C6278 /* Objc */ = {
+			isa = PBXGroup;
+			children = (
+				2FEE3F3226F2625000EE03F2 /* Array+.swift */,
+				2FCED4BC265A7A0B003C6278 /* STKAudioPlayer.h */,
+				2FCED4B0265A7A0B003C6278 /* STKAudioPlayer.m */,
+				2FCED4B8265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.h */,
+				2FCED4AD265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.m */,
+				2FEE3F2D26F253CA00EE03F2 /* STKCoreFoundationDataSource.swift */,
+				2FC2D7A8265AE83500C61C93 /* STKDataSource.swift */,
+				2FC2D7AA265AEC1F00C61C93 /* STKDataSourceWrapper.swift */,
+				2FCED4B1265A7A0B003C6278 /* STKHTTPDataSource.swift */,
+				2FEE3F2B26F250AF00EE03F2 /* STKLocalFileDataSource.swift */,
+				2FCED4BB265A7A0B003C6278 /* STKMacro.h */,
+				2FCED4BA265A7A0B003C6278 /* STKQueueEntry.h */,
+				2FCED4B2265A7A0B003C6278 /* STKQueueEntry.m */,
+				2FCED4C0265A7A0B003C6278 /* STKSpinLock.h */,
+				2FCED4AC265A7A0A003C6278 /* Traxx.fm-Bridging-Header.h */,
+			);
+			path = Objc;
+			sourceTree = "<group>";
+		};
+		2FEE3F2F26F2609800EE03F2 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2FEE3F3026F260B100EE03F2 /* SampleCode.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2FCED46B265A7582003C6278 /* Traxx.fm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FCED491265A7582003C6278 /* Build configuration list for PBXNativeTarget "Traxx.fm" */;
+			buildPhases = (
+				2FCED468265A7582003C6278 /* Sources */,
+				2FCED469265A7582003C6278 /* Frameworks */,
+				2FCED46A265A7582003C6278 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Traxx.fm;
+			packageProductDependencies = (
+			);
+			productName = Traxx.fm;
+			productReference = 2FCED46C265A7582003C6278 /* Traxx.fm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2FCED47C265A7582003C6278 /* Traxx.fmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FCED494265A7582003C6278 /* Build configuration list for PBXNativeTarget "Traxx.fmTests" */;
+			buildPhases = (
+				2FCED479265A7582003C6278 /* Sources */,
+				2FCED47A265A7582003C6278 /* Frameworks */,
+				2FCED47B265A7582003C6278 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FCED47F265A7582003C6278 /* PBXTargetDependency */,
+			);
+			name = Traxx.fmTests;
+			productName = Traxx.fmTests;
+			productReference = 2FCED47D265A7582003C6278 /* Traxx.fmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2FCED487265A7582003C6278 /* Traxx.fmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FCED497265A7582003C6278 /* Build configuration list for PBXNativeTarget "Traxx.fmUITests" */;
+			buildPhases = (
+				2FCED484265A7582003C6278 /* Sources */,
+				2FCED485265A7582003C6278 /* Frameworks */,
+				2FCED486265A7582003C6278 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FCED48A265A7582003C6278 /* PBXTargetDependency */,
+			);
+			name = Traxx.fmUITests;
+			productName = Traxx.fmUITests;
+			productReference = 2FCED488265A7582003C6278 /* Traxx.fmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2FCED464265A7582003C6278 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					2FCED46B265A7582003C6278 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					2FCED47C265A7582003C6278 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2FCED46B265A7582003C6278;
+					};
+					2FCED487265A7582003C6278 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2FCED46B265A7582003C6278;
+					};
+				};
+			};
+			buildConfigurationList = 2FCED467265A7582003C6278 /* Build configuration list for PBXProject "Traxx.fm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2FCED463265A7582003C6278;
+			productRefGroup = 2FCED46D265A7582003C6278 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2FCED46B265A7582003C6278 /* Traxx.fm */,
+				2FCED47C265A7582003C6278 /* Traxx.fmTests */,
+				2FCED487265A7582003C6278 /* Traxx.fmUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FCED46A265A7582003C6278 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FCED477265A7582003C6278 /* Preview Assets.xcassets in Resources */,
+				2F340E58265A9E2D00667B0A /* traxx_channels.json in Resources */,
+				2FCED474265A7582003C6278 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FCED47B265A7582003C6278 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FCED486265A7582003C6278 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FCED468265A7582003C6278 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FCED4A3265A762D003C6278 /* BarView.swift in Sources */,
+				2FCED472265A7582003C6278 /* ContentView.swift in Sources */,
+				2FCED4CB265A7EEF003C6278 /* SampleQueueId.swift in Sources */,
+				2FCED4A5265A7632003C6278 /* AudioPlayer.swift in Sources */,
+				2FCED470265A7582003C6278 /* Traxx_fmApp.swift in Sources */,
+				2FC2D7AB265AEC1F00C61C93 /* STKDataSourceWrapper.swift in Sources */,
+				2FEE3F3326F2625000EE03F2 /* Array+.swift in Sources */,
+				2FCED4A1265A7629003C6278 /* AudioPlayerView.swift in Sources */,
+				2FCED4C4265A7A0B003C6278 /* STKHTTPDataSource.swift in Sources */,
+				2FCED4C5265A7A0B003C6278 /* STKQueueEntry.m in Sources */,
+				2FCED4C1265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				2FEE3F3126F260B100EE03F2 /* SampleCode.swift in Sources */,
+				2FCED4A8265A7677003C6278 /* Image+Additions.swift in Sources */,
+				2FCED4C3265A7A0B003C6278 /* STKAudioPlayer.m in Sources */,
+				2FC2D7A9265AE83500C61C93 /* STKDataSource.swift in Sources */,
+				2FEE3F2C26F250AF00EE03F2 /* STKLocalFileDataSource.swift in Sources */,
+				2F340E56265A9D5700667B0A /* Channels.swift in Sources */,
+				2FEE3F2E26F253CA00EE03F2 /* STKCoreFoundationDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FCED479265A7582003C6278 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FCED482265A7582003C6278 /* Traxx_fmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FCED484265A7582003C6278 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FCED48D265A7582003C6278 /* Traxx_fmUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2FCED47F265A7582003C6278 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FCED46B265A7582003C6278 /* Traxx.fm */;
+			targetProxy = 2FCED47E265A7582003C6278 /* PBXContainerItemProxy */;
+		};
+		2FCED48A265A7582003C6278 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FCED46B265A7582003C6278 /* Traxx.fm */;
+			targetProxy = 2FCED489265A7582003C6278 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2FCED48F265A7582003C6278 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2FCED490265A7582003C6278 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2FCED492265A7582003C6278 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Traxx.fm/Preview Content\"";
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Traxx.fm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "digital.marine.Traxx-fm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Traxx.fm/Objc/Traxx.fm-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2FCED493265A7582003C6278 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Traxx.fm/Preview Content\"";
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Traxx.fm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "digital.marine.Traxx-fm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Traxx.fm/Objc/Traxx.fm-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2FCED495265A7582003C6278 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				INFOPLIST_FILE = Traxx.fmTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "digital.marine.Traxx-fmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Traxx.fm.app/Traxx.fm";
+			};
+			name = Debug;
+		};
+		2FCED496265A7582003C6278 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				INFOPLIST_FILE = Traxx.fmTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "digital.marine.Traxx-fmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Traxx.fm.app/Traxx.fm";
+			};
+			name = Release;
+		};
+		2FCED498265A7582003C6278 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				INFOPLIST_FILE = Traxx.fmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "digital.marine.Traxx-fmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Traxx.fm;
+			};
+			name = Debug;
+		};
+		2FCED499265A7582003C6278 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3G54NEN3F6;
+				INFOPLIST_FILE = Traxx.fmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "digital.marine.Traxx-fmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Traxx.fm;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FCED467265A7582003C6278 /* Build configuration list for PBXProject "Traxx.fm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FCED48F265A7582003C6278 /* Debug */,
+				2FCED490265A7582003C6278 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FCED491265A7582003C6278 /* Build configuration list for PBXNativeTarget "Traxx.fm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FCED492265A7582003C6278 /* Debug */,
+				2FCED493265A7582003C6278 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FCED494265A7582003C6278 /* Build configuration list for PBXNativeTarget "Traxx.fmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FCED495265A7582003C6278 /* Debug */,
+				2FCED496265A7582003C6278 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FCED497265A7582003C6278 /* Build configuration list for PBXNativeTarget "Traxx.fmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FCED498265A7582003C6278 /* Debug */,
+				2FCED499265A7582003C6278 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2FCED464265A7582003C6278 /* Project object */;
+}

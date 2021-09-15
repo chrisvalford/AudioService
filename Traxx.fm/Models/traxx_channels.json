@@ -1,0 +1,22 @@
+{"all": [
+    {"identifier":"deluxe", "endpoint":"http://traxx001.ice.infomaniak.ch/traxx001-low.mp3"},
+	{"identifier":"house", "endpoint":"http://traxx002.ice.infomaniak.ch/traxx002-low.mp3"},
+	{"identifier":"electro", "endpoint":"http://traxx003.ice.infomaniak.ch/traxx003-low.mp3"},
+	{"identifier":"lounge", "endpoint":"http://traxx004.ice.infomaniak.ch/traxx004-low.mp3"},
+	{"identifier":"cooljam", "endpoint":"http://traxx005.ice.infomaniak.ch/traxx005-low.mp3"},
+	{"identifier":"soul", "endpoint":"http://traxx006.ice.infomaniak.ch/traxx006-low.mp3"},
+	{"identifier":"rnb", "endpoint":"http://traxx007.ice.infomaniak.ch/traxx007-low.mp3"},
+	{"identifier":"latino", "endpoint":"http://traxx008.ice.infomaniak.ch/traxx008-low.mp3"},
+	{"identifier":"pop", "endpoint":"http://traxx009.ice.infomaniak.ch/traxx009-low.mp3"},
+	{"identifier":"hits", "endpoint":"http://traxx010.ice.infomaniak.ch/traxx010-low.mp3"},
+	{"identifier":"ambient", "endpoint":"http://traxx011.ice.infomaniak.ch/traxx011-low.mp3"},
+	{"identifier":"classic", "endpoint":"http://traxx012.ice.infomaniak.ch/traxx012-low.mp3"},
+	{"identifier":"deep", "endpoint":"http://traxx013.ice.infomaniak.ch/traxx013-low.mp3"},
+	{"identifier":"jazz", "endpoint":"http://traxx014.ice.infomaniak.ch/traxx014-low.mp3"},
+	{"identifier":"rap", "endpoint":"http://traxx015.ice.infomaniak.ch/traxx015-low.mp3"},
+	{"identifier":"funk", "endpoint":"http://traxx016.ice.infomaniak.ch/traxx016-low.mp3"},
+	{"identifier":"goldhits", "endpoint":"http://traxx017.ice.infomaniak.ch/traxx017-low.mp3"},
+	{"identifier":"dance", "endpoint":"http://traxx018.ice.infomaniak.ch/traxx018-low.mp3"},
+	{"identifier":"rock", "endpoint":"http://traxx019.ice.infomaniak.ch/traxx019-low.mp3"},
+	{"identifier":"tech", "endpoint":"http://traxx020.ice.infomaniak.ch/traxx020-low.mp3"}
+]}
