@@ -21,42 +21,42 @@ class STKAudioPlayer : NSObject, STKDataSourceDelegate {
 /// Gets or sets the player muted state
     var muted: Bool
 /// Gets the current item duration in seconds
-    @property (readonly)  duration: Double
+    var  duration: Double // RO
 /// Gets the current item progress in seconds
-@property (readonly)  progress: Double;
+    var progress: Double // RO
 /// Gets or sets the playback rate (default is 1.0)
-@property(readwrite) float rate;
-// Gets or sets the playback overlap (default is 8.0)
-@property(readwrite) float overlap;
+    var rate: Float
+/// Gets or sets the playback overlap (default is 8.0)
+    var overlap: Float
 /// Enables or disables peak and average decibel meteting
-var BOOL meteringEnabled;
+var meteringEnabled: Bool
 /// Enables or disables the EQ
-     -(BOOL) equalizerEnabled
-    {
-        return self->equalizerEnabled;
-    }
-
-    func setEqualizerEnabled:(BOOL)value
-    {
-        self->equalizerEnabled = value;
-    }
-var BOOL equalizerEnabled;
+//     -(BOOL) equalizerEnabled
+//    {
+//        return self->equalizerEnabled;
+//    }
+//
+//    func setEqualizerEnabled:(BOOL)value
+//    {
+//        self->equalizerEnabled = value;
+//    }
+var equalizerEnabled: Bool
 /// Returns an array of STKFrameFilterEntry objects representing the filters currently in use
-@property (readonly, nullable) NSArray* frameFilters;
+    var frameFilters: [STKFrameFilterEntry]? // RO
 /// Returns the items pending to be played (includes buffering and upcoming items but does not include the current item)
-@property (readonly) NSArray* pendingQueue;
+var pendingQueue: [] // RO
 /// The number of items pending to be played (includes buffering and upcoming items but does not include the current item)
-@property (readonly) NSUInteger pendingQueueCount;
+    var pendingQueueCount: Int // RO
 /// Gets the most recently queued item that is still pending to play
-@property (readonly, nullable) NSObject* mostRecentlyQueuedStillPendingItem;
+    var mostRecentlyQueuedStillPendingItem: AnyObject? // RO
 /// Gets the current state of the player
-var STKAudioPlayerState state;
+    var state: STKAudioPlayerState ;
 /// Gets the options provided to the player on startup
-@property (readonly) STKAudioPlayerOptions options;
+    var options: STKAudioPlayerOptions // RO
 /// Gets the reason why the player is stopped (if any)
-@property (readonly) STKAudioPlayerStopReason stopReason;
+    var stopReason: STKAudioPlayerStopReason // RO
 /// Gets and sets the delegate used for receiving events from the STKAudioPlayer
-@property (readwrite, weak) id<STKAudioPlayerDelegate> delegate;
+    weak var delegate: STKAudioPlayerDelegate?
 
 /// Creates a datasource from a given URL.
 /// URLs with FILE schemes will return an STKLocalFileDataSource.
@@ -161,44 +161,42 @@ func addFrameFilterWithName:(NSString*)name afterFilterWithName:(nullable NSStri
 /// Sets the gain value (from -96 low to +24 high) for an equalizer band (0 based index)
 func setGain:(float)gain forEqualizerBand:(int)bandIndex;
 
-@end
 
-NS_ASSUME_NONNULL_END
 
 
 
 
 #ifndef DBL_MAX
-#define DBL_MAX 1.7976931348623157e+308
+    let DBL_MAX = 1.7976931348623157e+308
 #endif
 
 //MARK: Defines
 
-#define kOutputBus 0
-#define kInputBus 1
+let kOutputBus = 0
+    let kInputBus = 1
 
-#define STK_DBMIN (-60)
-#define STK_DBOFFSET (-74.0)
-#define STK_LOWPASSFILTERTIMESLICE (0.0005)
+    let STK_DBMIN = (-60)
+    let STK_DBOFFSET = (-74.0)
+    let STK_LOWPASSFILTERTIMESLICE = (0.0005)
 
-#define STK_DEFAULT_PCM_BUFFER_SIZE_IN_SECONDS (10)
-#define STK_DEFAULT_SECONDS_REQUIRED_TO_START_PLAYING (1)
-#define STK_DEFAULT_SECONDS_REQUIRED_TO_START_PLAYING_AFTER_BUFFER_UNDERRUN (7.5)
-#define STK_MAX_COMPRESSED_PACKETS_FOR_BITRATE_CALCULATION (4096)
-#define STK_DEFAULT_READ_BUFFER_SIZE (64 * 1024)
-#define STK_DEFAULT_PACKET_BUFFER_SIZE (2048)
-#define STK_DEFAULT_GRACE_PERIOD_AFTER_SEEK_SECONDS (0.5)
+    let STK_DEFAULT_PCM_BUFFER_SIZE_IN_SECONDS = (10)
+    let STK_DEFAULT_SECONDS_REQUIRED_TO_START_PLAYING = (1)
+    let STK_DEFAULT_SECONDS_REQUIRED_TO_START_PLAYING_AFTER_BUFFER_UNDERRUN = (7.5)
+    let STK_MAX_COMPRESSED_PACKETS_FOR_BITRATE_CALCULATION = (4096)
+    let STK_DEFAULT_READ_BUFFER_SIZE = (64 * 1024)
+    let STK_DEFAULT_PACKET_BUFFER_SIZE = (2048)
+    let STK_DEFAULT_GRACE_PERIOD_AFTER_SEEK_SECONDS = (0.5)
 
-#define OSSTATUS_PRINTF_PLACEHOLDER @"%c%c%c%c"
-#define OSSTATUS_PRINTF_VALUE(status) (char)(((status) >> 24) & 0xFF), (char)(((status) >> 16) & 0xFF), (char)(((status) >> 8) & 0xFF), (char)((status) & 0xFF)
+    let OSSTATUS_PRINTF_PLACEHOLDER = "%c%c%c%c"
+    let OSSTATUS_PRINTF_VALUE(status) (char)(((status) >> 24) & 0xFF), (char)(((status) >> 16) & 0xFF), (char)(((status) >> 8) & 0xFF), (char)((status) & 0xFF)
 
-#define LOGINFO(x) [self logInfo:[NSString stringWithFormat:@"%s %@", sel_getName(_cmd), x]];
+    let LOGINFO(x) = logInfo:String(format: "%s %@", sel_getName(_cmd), x)
 
-static void PopulateOptionsWithDefault(STKAudioPlayerOptions* options)
+    class func PopulateOptionsWithDefault(options: STKAudioPlayerOptions)
 {
-    if (options->bufferSizeInSeconds == 0)
+    if (options.bufferSizeInSeconds == 0)
     {
-        options->bufferSizeInSeconds = STK_DEFAULT_PCM_BUFFER_SIZE_IN_SECONDS;
+        options.bufferSizeInSeconds = STK_DEFAULT_PCM_BUFFER_SIZE_IN_SECONDS;
     }
 
     if (options->readBufferSize == 0)
@@ -592,7 +590,7 @@ static void AudioFileStreamPacketsProc(void* clientData, UInt32 numberBytes, UIn
     return stopReason;
 }
 
-func logInfo:(NSString*)line
+    func logInfo(line: String)
 {
     if ([NSThread currentThread].isMainThread)
     {
@@ -610,12 +608,12 @@ func logInfo:(NSString*)line
     }
 }
 
--(instancetype) init
+ init()
 {
     return [self initWithOptions:(STKAudioPlayerOptions){}];
 }
 
--(instancetype) initWithOptions:(STKAudioPlayerOptions)optionsIn
+init(options:STKAudioPlayerOptions)
 {
     if (self = [super init])
     {
@@ -624,10 +622,10 @@ func logInfo:(NSString*)line
         seekLock = OS_UNFAIR_LOCK_INIT;
         currentEntryReferencesLock = OS_UNFAIR_LOCK_INIT;
 
-        options = optionsIn;
+        options = options
 
         self->volume = 1.0;
-        self->equalizerEnabled = optionsIn.equalizerBandFrequencies[0] != 0;
+        self->equalizerEnabled = options.equalizerBandFrequencies[0] != 0;
 
         PopulateOptionsWithDefault(&options);
         NormalizeDisabledBuffers(&options);
