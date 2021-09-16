@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AudioToolbox
 
 protocol STKDataSourceDelegate: NSObject {
     func dataSourceDataAvailable(dataSource: STKDataSource)
@@ -16,18 +17,19 @@ protocol STKDataSourceDelegate: NSObject {
 
 class STKDataSource: NSObject {
 
-    private (set) var supportsSeek: Bool {
+    var supportsSeek: Bool {
         return true
     }
-    private (set) var position: Int64 {// SInt64
+    var position: Int {// SInt64
         return 0
     }
-    private (set) var length: Int {
+    var length: Int {
         return 0
     }
-    private (set) var hasBytesAvailable: Bool {
+    var hasBytesAvailable: Bool {
         return false
     }
+
     var durationHint: Double
     var delegate: STKDataSourceDelegate?
     var recordToFileUrl: URL
@@ -36,17 +38,11 @@ class STKDataSource: NSObject {
         return false
     }
     
-    func unregisterForEvents() {
-        
-    }
+    func unregisterForEvents() { }
     
-    func close() {
-        
-    }
+    func close() { }
 
-    func seekToOffset(offset: Int) {
-        
-    }
+    func seekToOffset(offset: Int) { }
     
     func readIntoBuffer(buffer: UInt8, withSize size: Int) -> Int {
         return -1

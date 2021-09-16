@@ -10,8 +10,8 @@ import AudioToolbox
 
 class STKLocalFileDataSource: STKCoreFoundationDataSource {
 
-    private var position: Int64
-    private var length: Int64
+    private var position: Int
+    private var length: Int
     private var _audioFileTypeHint: AudioFileTypeID
 
     var filePath: String
@@ -24,7 +24,7 @@ class STKLocalFileDataSource: STKCoreFoundationDataSource {
     }
 
     class func audioFileTypeHintFrom(fileExtension: String) -> AudioFileTypeID {
-    let fileTypesByFileExtensions = [
+        let fileTypesByFileExtensions = [
             ["mp3": kAudioFileMP3Type],
             ["wav": kAudioFileWAVEType],
             ["aifc": kAudioFileAIFCType],
@@ -35,7 +35,7 @@ class STKLocalFileDataSource: STKCoreFoundationDataSource {
             ["aac": kAudioFileAAC_ADTSType],
             ["ac3": kAudioFileAC3Type],
             ["3gp": kAudioFile3GPType]
-    ]
+        ]
         if let number = fileTypesByFileExtensions[fileExtension] {
             return number // AudioFileTypeID
         }
@@ -46,136 +46,93 @@ class STKLocalFileDataSource: STKCoreFoundationDataSource {
         return _audioFileTypeHint
     }
 
-    func close() {
+    override func close() {
         if stream != nil {
             unregisterForEvents()
             CFReadStreamClose(stream)
-            stream = 0
+            stream = nil
         }
     }
 
-    func open() {
-    if stream != nil {
-        unregisterForEvents()
-        CFReadStreamClose(stream)
-        CFRelease(stream)
-        stream = 0
-    }
-    
-    NSURL* url = [[NSURL alloc] initFileURLWithPath:self.filePath];
-    
-    stream = CFReadStreamCreateWithFile(NULL, (__bridge CFURLRef)url);
-    
-    NSError* fileError;
-    NSFileManager* manager = [[NSFileManager alloc] init];
-    NSDictionary* attributes = [manager attributesOfItemAtPath:filePath error:&fileError];
+    override func open() {
+        if stream != nil {
+            unregisterForEvents()
+            CFReadStreamClose(stream)
+            stream = nil
+        }
 
-    if (fileError)
-    {
-        CFReadStreamClose(stream);
-        CFRelease(stream);
-        stream = 0;
-        return;
-    }
+        let url = URL(fileURLWithPath: self.filePath)
+        stream = CFReadStreamCreateWithFile(nil, url) // CFURLRef
 
-    NSNumber* number = [attributes objectForKey:@"NSFileSize"];
-    
-    if (number)
-    {
-        length = number.longLongValue;
-    }
-    
-    [self reregisterForEvents];
-
-    CFReadStreamOpen(stream);
-}
-
--(SInt64) position
-{
-    return position;
-}
-
--(SInt64) length
-{
-    return length;
-}
-
--(int) readIntoBuffer:(UInt8*)buffer withSize:(int)size
-{
-    int retval = (int)CFReadStreamRead(stream, buffer, size);
-
-    if (retval > 0)
-    {
-        position += retval;
-    }
-    else
-    {
-        NSNumber* property = (__bridge_transfer NSNumber*)CFReadStreamCopyProperty(stream, kCFStreamPropertyFileCurrentOffset);
-        
-        position = property.longLongValue;
-    }
-    
-    return retval;
-}
-
--(void) seekToOffset:(SInt64)offset
-{
-    CFStreamStatus status = kCFStreamStatusClosed;
-    
-    if (stream != 0)
-    {
-        status = CFReadStreamGetStatus(stream);
-    }
-    
-    BOOL reopened = NO;
-    
-    if (status == kCFStreamStatusAtEnd || status == kCFStreamStatusClosed || status == kCFStreamStatusError)
-    {
-        reopened = YES;
-        
-        [self close];
-        [self open];
-    }
-    
-    if (stream == 0)
-    {
-        CFRunLoopPerformBlock(eventsRunLoop.getCFRunLoop, NSRunLoopCommonModes, ^
-        {
-            [self errorOccured];
-        });
-        
-        CFRunLoopWakeUp(eventsRunLoop.getCFRunLoop);
-        
-        return;
-    }
-    
-    if (CFReadStreamSetProperty(stream, kCFStreamPropertyFileCurrentOffset, (__bridge CFTypeRef)[NSNumber numberWithLongLong:offset]) != TRUE)
-    {
-        position = 0;
-    }
-    else
-    {
-        position = offset;
-    }
-    
-    if (!reopened)
-    {
-        CFRunLoopPerformBlock(eventsRunLoop.getCFRunLoop, NSRunLoopCommonModes, ^
-        {
-            if ([self hasBytesAvailable])
-            {
-                [self dataAvailable];
+        let manager = FileManager()
+        do {
+            let attributes = try manager.attributesOfItem(atPath: filePath)
+            if let number = attributes[FileAttributeKey(rawValue: "NSFileSize")] {
+                length = number as! Int
             }
-        });
-        
-        CFRunLoopWakeUp(eventsRunLoop.getCFRunLoop);
+            reregisterForEvents()
+            CFReadStreamOpen(stream)
+        } catch {
+            CFReadStreamClose(stream)
+            stream = nil
+            return
+        }
     }
-}
 
--(NSString*) description
-{
-    return self->filePath;
-}
+    override func readIntoBuffer(buffer: inout [UInt8], withSize size: Int) -> Int {
+        let retval = CFReadStreamRead(stream, &buffer, size)
+        if retval > 0 {
+            position += retval;
+        } else {
+            let property = CFReadStreamCopyProperty(stream, CFStreamPropertyKey.fileCurrentOffset)
+            position = property
+        }
+        return retval;
+    }
 
-@end
+    override func seekToOffset(offset: Int) {
+        var status: CFStreamStatus = .closed
+
+        if stream != nil {
+            status = CFReadStreamGetStatus(stream)
+        }
+
+        var reopened = false
+
+        if (status == CFStreamStatus.atEnd || status == CFStreamStatus.closed || status == CFStreamStatus.error) {
+            reopened = true
+
+            close()
+            open()
+        }
+
+        if stream == nil {
+            CFRunLoopPerformBlock(eventsRunLoop?.getCFRunLoop, NSRunLoopCommonModes, ^{
+                self.errorOccured()
+            });
+
+            CFRunLoopWakeUp(eventsRunLoop?.getCFRunLoop);
+            return
+        }
+
+        if CFReadStreamSetProperty(stream, kCFStreamPropertyFileCurrentOffset, offset) != true {
+            position = 0
+        } else {
+            position = offset
+        }
+        if !reopened {
+            CFRunLoopPerformBlock(eventsRunLoop?.getCFRunLoop, NSRunLoopCommonModes, ^ {
+                if self.hasBytesAvailable() {
+                    self.dataAvailable()
+                }
+            })
+            CFRunLoopWakeUp(eventsRunLoop?.getCFRunLoop);
+        }
+    }
+
+    func description() -> String {
+        return filePath
+    }
+
+}
 

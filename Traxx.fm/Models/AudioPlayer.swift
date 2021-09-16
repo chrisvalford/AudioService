@@ -7,7 +7,7 @@
 
 import UIKit
 import SwiftUI
-import AVFoundation
+import AudioToolbox
 
 class AudioPlayer: NSObject, ObservableObject {
     

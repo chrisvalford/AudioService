@@ -22,10 +22,14 @@
 		2FCED4A5265A7632003C6278 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4A4265A7632003C6278 /* AudioPlayer.swift */; };
 		2FCED4A8265A7677003C6278 /* Image+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4A7265A7677003C6278 /* Image+Additions.swift */; };
 		2FCED4C1265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4AD265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.m */; };
-		2FCED4C3265A7A0B003C6278 /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4B0265A7A0B003C6278 /* STKAudioPlayer.m */; };
 		2FCED4C4265A7A0B003C6278 /* STKHTTPDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4B1265A7A0B003C6278 /* STKHTTPDataSource.swift */; };
 		2FCED4C5265A7A0B003C6278 /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4B2265A7A0B003C6278 /* STKQueueEntry.m */; };
 		2FCED4CB265A7EEF003C6278 /* SampleQueueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCED4CA265A7EEF003C6278 /* SampleQueueId.swift */; };
+		2FDAF69D26F26F5600843DC7 /* STKAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAF69C26F26F5600843DC7 /* STKAudioPlayer.swift */; };
+		2FDAF69F26F270C000843DC7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAF69E26F270C000843DC7 /* Enums.swift */; };
+		2FDAF6A126F271D500843DC7 /* STKAudioPlayerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAF6A026F271D500843DC7 /* STKAudioPlayerOptions.swift */; };
+		2FDAF6A326F272E900843DC7 /* STKFrameFilterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAF6A226F272E900843DC7 /* STKFrameFilterEntry.swift */; };
+		2FDAF6A526F273CB00843DC7 /* STKAudioPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDAF6A426F273CB00843DC7 /* STKAudioPlayerDelegate.swift */; };
 		2FEE3F2C26F250AF00EE03F2 /* STKLocalFileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE3F2B26F250AF00EE03F2 /* STKLocalFileDataSource.swift */; };
 		2FEE3F2E26F253CA00EE03F2 /* STKCoreFoundationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE3F2D26F253CA00EE03F2 /* STKCoreFoundationDataSource.swift */; };
 		2FEE3F3126F260B100EE03F2 /* SampleCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE3F3026F260B100EE03F2 /* SampleCode.swift */; };
@@ -72,15 +76,18 @@
 		2FCED4A7265A7677003C6278 /* Image+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Additions.swift"; sourceTree = "<group>"; };
 		2FCED4AC265A7A0A003C6278 /* Traxx.fm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Traxx.fm-Bridging-Header.h"; sourceTree = "<group>"; };
 		2FCED4AD265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAutoRecoveringHTTPDataSource.m; sourceTree = "<group>"; };
-		2FCED4B0265A7A0B003C6278 /* STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAudioPlayer.m; sourceTree = "<group>"; };
 		2FCED4B1265A7A0B003C6278 /* STKHTTPDataSource.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = STKHTTPDataSource.swift; sourceTree = "<group>"; };
 		2FCED4B2265A7A0B003C6278 /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueEntry.m; sourceTree = "<group>"; };
 		2FCED4B8265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAutoRecoveringHTTPDataSource.h; sourceTree = "<group>"; };
 		2FCED4BA265A7A0B003C6278 /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueEntry.h; sourceTree = "<group>"; };
 		2FCED4BB265A7A0B003C6278 /* STKMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKMacro.h; sourceTree = "<group>"; };
-		2FCED4BC265A7A0B003C6278 /* STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAudioPlayer.h; sourceTree = "<group>"; };
 		2FCED4C0265A7A0B003C6278 /* STKSpinLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKSpinLock.h; sourceTree = "<group>"; };
 		2FCED4CA265A7EEF003C6278 /* SampleQueueId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleQueueId.swift; sourceTree = "<group>"; };
+		2FDAF69C26F26F5600843DC7 /* STKAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STKAudioPlayer.swift; sourceTree = "<group>"; };
+		2FDAF69E26F270C000843DC7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		2FDAF6A026F271D500843DC7 /* STKAudioPlayerOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STKAudioPlayerOptions.swift; sourceTree = "<group>"; };
+		2FDAF6A226F272E900843DC7 /* STKFrameFilterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STKFrameFilterEntry.swift; sourceTree = "<group>"; };
+		2FDAF6A426F273CB00843DC7 /* STKAudioPlayerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STKAudioPlayerDelegate.swift; sourceTree = "<group>"; };
 		2FEE3F2B26F250AF00EE03F2 /* STKLocalFileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STKLocalFileDataSource.swift; sourceTree = "<group>"; };
 		2FEE3F2D26F253CA00EE03F2 /* STKCoreFoundationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STKCoreFoundationDataSource.swift; sourceTree = "<group>"; };
 		2FEE3F3026F260B100EE03F2 /* SampleCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCode.swift; sourceTree = "<group>"; };
@@ -215,8 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				2FEE3F3226F2625000EE03F2 /* Array+.swift */,
-				2FCED4BC265A7A0B003C6278 /* STKAudioPlayer.h */,
-				2FCED4B0265A7A0B003C6278 /* STKAudioPlayer.m */,
+				2FDAF69C26F26F5600843DC7 /* STKAudioPlayer.swift */,
 				2FCED4B8265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.h */,
 				2FCED4AD265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.m */,
 				2FEE3F2D26F253CA00EE03F2 /* STKCoreFoundationDataSource.swift */,
@@ -229,6 +235,10 @@
 				2FCED4B2265A7A0B003C6278 /* STKQueueEntry.m */,
 				2FCED4C0265A7A0B003C6278 /* STKSpinLock.h */,
 				2FCED4AC265A7A0A003C6278 /* Traxx.fm-Bridging-Header.h */,
+				2FDAF69E26F270C000843DC7 /* Enums.swift */,
+				2FDAF6A026F271D500843DC7 /* STKAudioPlayerOptions.swift */,
+				2FDAF6A226F272E900843DC7 /* STKFrameFilterEntry.swift */,
+				2FDAF6A426F273CB00843DC7 /* STKAudioPlayerDelegate.swift */,
 			);
 			path = Objc;
 			sourceTree = "<group>";
@@ -382,16 +392,20 @@
 				2FC2D7AB265AEC1F00C61C93 /* STKDataSourceWrapper.swift in Sources */,
 				2FEE3F3326F2625000EE03F2 /* Array+.swift in Sources */,
 				2FCED4A1265A7629003C6278 /* AudioPlayerView.swift in Sources */,
+				2FDAF6A326F272E900843DC7 /* STKFrameFilterEntry.swift in Sources */,
+				2FDAF6A526F273CB00843DC7 /* STKAudioPlayerDelegate.swift in Sources */,
 				2FCED4C4265A7A0B003C6278 /* STKHTTPDataSource.swift in Sources */,
 				2FCED4C5265A7A0B003C6278 /* STKQueueEntry.m in Sources */,
 				2FCED4C1265A7A0B003C6278 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				2FDAF6A126F271D500843DC7 /* STKAudioPlayerOptions.swift in Sources */,
 				2FEE3F3126F260B100EE03F2 /* SampleCode.swift in Sources */,
 				2FCED4A8265A7677003C6278 /* Image+Additions.swift in Sources */,
-				2FCED4C3265A7A0B003C6278 /* STKAudioPlayer.m in Sources */,
+				2FDAF69D26F26F5600843DC7 /* STKAudioPlayer.swift in Sources */,
 				2FC2D7A9265AE83500C61C93 /* STKDataSource.swift in Sources */,
 				2FEE3F2C26F250AF00EE03F2 /* STKLocalFileDataSource.swift in Sources */,
 				2F340E56265A9D5700667B0A /* Channels.swift in Sources */,
 				2FEE3F2E26F253CA00EE03F2 /* STKCoreFoundationDataSource.swift in Sources */,
+				2FDAF69F26F270C000843DC7 /* Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

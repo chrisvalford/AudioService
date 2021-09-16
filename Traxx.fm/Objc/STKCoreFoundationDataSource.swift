@@ -7,10 +7,10 @@
 
 import Foundation
 
-class CoreFoundationDataSourceClientInfo {
-    var readStreamRef: CFReadStream
-    var datasource: STKCoreFoundationDataSource
-}
+//class CoreFoundationDataSourceClientInfo {
+//    var readStreamRef: CFReadStream
+//    var datasource: STKCoreFoundationDataSource
+//}
 
 class STKCoreFoundationDataSource: STKDataSource {
     
@@ -79,22 +79,26 @@ class STKCoreFoundationDataSource: STKDataSource {
     
     func seekToOffset(offset: Int64) { }
     
-    func readIntoBuffer(buffer: [UInt8], withSize size: Int) -> Int {
-        return CFReadStreamRead(stream, buffer, size);
+    func readIntoBuffer(buffer: inout [UInt8], withSize size: Int) -> Int {
+        return CFReadStreamRead(stream, &buffer, size);
     }
     
     override func unregisterForEvents() {
         if stream != nil {
-            CFReadStreamSetClient(stream, .hasBytesAvailable | .errorOccurred | .endEncountered, NULL, NULL)
-            CFReadStreamUnscheduleFromRunLoop(stream, eventsRunLoop.getCFRunLoop(), kCFRunLoopCommonModes)
+            CFReadStreamSetClient(stream, CFStreamEventType.hasBytesAvailable.rawValue | CFStreamEventType.errorOccurred.rawValue | CFStreamEventType.endEncountered.rawValue, nil, nil)
+            CFReadStreamUnscheduleFromRunLoop(stream, eventsRunLoop?.getCFRunLoop(), CFRunLoopMode.commonModes)
         }
     }
     
     func reregisterForEvents() -> Bool {
         if eventsRunLoop != nil && stream != nil {
-            let context: CFStreamClientContext = {0, self, NULL, NULL, NULL}
-            CFReadStreamSetClient(stream, .hasBytesAvailable | .errorOccurred | .endEncountered, ReadStreamCallbackProc, &context)
-            CFReadStreamScheduleWithRunLoop(stream, eventsRunLoop.getCFRunLoop(), kCFRunLoopCommonModes)
+            var context = CFStreamClientContext(version: 0,
+                                                info: unsafeBitCast(self, to: UnsafeMutableRawPointer.self),
+                                                retain: nil,
+                                                release: nil,
+                                                copyDescription: nil)
+            CFReadStreamSetClient(stream, CFStreamEventType.hasBytesAvailable.rawValue | CFStreamEventType.errorOccurred.rawValue | CFStreamEventType.endEncountered.rawValue, STKCoreFoundationDataSource.ReadStreamCallbackProc, &context)
+            CFReadStreamScheduleWithRunLoop(stream, eventsRunLoop?.getCFRunLoop(), CFRunLoopMode.commonModes)
             return true
         }
         return false
@@ -108,11 +112,14 @@ class STKCoreFoundationDataSource: STKDataSource {
             return true
         }
         
-        let context: CFStreamClientContext = {0, self, NULL, NULL, NULL};
+        var context = CFStreamClientContext(version: 0,
+                                            info: unsafeBitCast(self, to: UnsafeMutableRawPointer.self),
+                                            retain: nil,
+                                            release: nil,
+                                            copyDescription: nil)
+        CFReadStreamSetClient(stream, CFStreamEventType.hasBytesAvailable.rawValue | CFStreamEventType.errorOccurred.rawValue | CFStreamEventType.endEncountered.rawValue, ReadStreamCallbackProc, &context)
         
-        CFReadStreamSetClient(stream, .hasBytesAvailable | .errorOccurred | .endEncountered, ReadStreamCallbackProc, &context)
-        
-        CFReadStreamScheduleWithRunLoop(stream, eventsRunLoop.getCFRunLoop(), kCFRunLoopCommonModes);
+        CFReadStreamScheduleWithRunLoop(stream, eventsRunLoop?.getCFRunLoop(), CFRunLoopMode.commonModes)
         
         return true
     }
